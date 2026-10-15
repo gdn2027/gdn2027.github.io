@@ -8,8 +8,8 @@ const FIXED_CONFERENCE={
     "location": "Chengdu, China",
     "host": "Sichuan University",
     "email": "gdn2027@gdnconference.org",
-    "hero_image": "static/images/wangjiang-garden.jpg",
-    "venue_image": "static/images/wangjiang-hotel.jpg"
+    "hero_image": "static/images/scu-wangjiang-gate.png",
+    "venue_image": "static/images/scu-wangjiang-gate.png"
   },
   "pages": [
     {
@@ -24,13 +24,6 @@ const FIXED_CONFERENCE={
       "title": "Committees",
       "menu_group": "About",
       "order": 20,
-      "intro": ""
-    },
-    {
-      "page_id": "awards",
-      "title": "Awards",
-      "menu_group": "About",
-      "order": 30,
       "intro": ""
     },
     {
@@ -132,13 +125,6 @@ const FIXED_CONFERENCE={
       "intro": ""
     },
     {
-      "page_id": "award-winners",
-      "title": "Award winners",
-      "menu_group": "Programme",
-      "order": 40,
-      "intro": ""
-    },
-    {
       "page_id": "registration",
       "title": "Registration",
       "menu_group": "Registration",
@@ -181,7 +167,7 @@ function nav(){
  $('#navigation').innerHTML='<a href="#home" data-nav="home">Home</a>'+order.map(group=>{
   const pages=db.pages.filter(p=>p.menu_group===group).sort((a,b)=>a.order-b.order);
   if(pages.length===1)return `<a href="#${pages[0].page_id}" data-nav="${pages[0].page_id}">${esc(group)}</a>`;
-  return `<details data-group="${esc(group)}"><summary>${esc(group)}</summary><div class="dropdown">${pages.map(p=>`<a href="#${p.page_id}" data-nav="${p.page_id}">${esc(p.title)}</a>`).join('')}</div></details>`;
+  return `<details name="main-navigation" data-group="${esc(group)}"><summary>${esc(group)}</summary><div class="dropdown">${pages.map(p=>`<a href="#${p.page_id}" data-nav="${p.page_id}">${esc(p.title)}</a>`).join('')}</div></details>`;
  }).join('')+`<a href="mailto:${esc(db.site.email)}" aria-label="Contact the organizers by email">Contact</a>`;
  $('#footer').innerHTML=`<div class="container"><div class="footer-top"><div><a class="wordmark" href="#home">GDN<span>2027</span></a><p>${esc(db.site.full_title)}</p><p>${esc(db.site.host)} · China</p></div><div class="footer-links"><a href="#schedule">Programme</a><a href="#paper-submission-2">Submission</a><a href="#venue">Venue</a><a href="mailto:${esc(db.site.email)}">Contact</a></div></div><div class="footer-bottom"><span>${esc(db.site.date_label)} · ${esc(db.site.location)}</span></div></div>`;
 }
@@ -197,13 +183,13 @@ function home(){
  const s=db.site,news=latestNews();
  const topics=[['Methodological Foundations','Methods for shared decisions and negotiation.'],['Theoretical Foundations','Models of preferences, bargaining and conflict.'],['Technological Foundations','Intelligent tools and decision support systems.'],['Behavioural Aspects','People, communication and collective choice.'],['Systems Design and Use','Designing support for collaboration.'],['Applications','Research connected to real decisions.']];
  const conferenceDays=['2027-06-06','2027-06-07','2027-06-08','2027-06-09'];
- return `<section class="hero"><img src="${esc(s.hero_image)}" alt="Garden courtyard at Wangjiang Hotel, Chengdu"><div class="container hero-inner"><h1><span class="conference-prefix">27th International Conference on</span>Group Decision<br><em>and Negotiation</em></h1><p>Connecting research, perspectives and practice in collective decision making.</p><div class="hero-meta"><span><strong>${esc(s.date_label)}</strong><small>Four days of research and exchange</small></span><span><strong>${esc(s.location)}</strong><small>Hosted by ${esc(s.host)}</small></span></div><div class="actions"><a class="btn" href="#call-for-papers">Call for papers</a><a class="btn light" href="#schedule">Conference programme</a><a class="btn outline" href="#hotel-information">Plan your stay</a></div></div></section>
+ return `<section class="hero"><img src="${esc(s.hero_image)}" alt="North gate of Sichuan University’s Wangjiang Campus"><div class="container hero-inner"><h1><span class="conference-prefix">27th International Conference on</span>Group Decision<br><em>and Negotiation</em></h1><p>Connecting research, perspectives and practice in collective decision making.</p><div class="hero-meta"><span><strong>${esc(s.date_label)}</strong><small>Four days of research and exchange</small></span><span><strong>${esc(s.location)}</strong><small>Hosted by ${esc(s.host)}</small></span></div><div class="actions"><a class="btn" href="#call-for-papers">Call for papers</a><a class="btn light" href="#schedule">Conference programme</a><a class="btn outline" href="#hotel-information">Plan your stay</a></div></div></section>
  <div class="quickbar"><div class="container quick-grid"><a href="#call-for-papers"><small>RESEARCH</small><strong>Call for papers & streams</strong></a><a href="#important-dates-2"><small>DEADLINES</small><strong>Important dates</strong></a><a href="#committees"><small>OUR COMMUNITY</small><strong>Conference committees</strong></a><a href="#venue"><small>PLAN YOUR VISIT</small><strong>Venue, hotels & travel</strong></a></div></div>
- <section class="section"><div class="container welcome-grid ${news?'':'no-news'}"><div class="welcome"><span class="eyebrow">Welcome to Chengdu</span><h2>A meeting place for<br>ideas and collaboration.</h2><p>The 27th International Conference on Group Decision and Negotiation brings the international GDN community to Chengdu, China, from <strong>6 to 9 June 2027</strong>, hosted by <strong>Sichuan University</strong>.</p><p>Researchers and practitioners exchange advances in group decision and negotiation, discuss emerging methods and applications, and develop ideas through dialogue and constructive feedback.</p><p>A dedicated doctoral track gives students an opportunity to present work in progress and receive guidance from experienced researchers.</p><p>The conference venue is <strong>Wangjiang Hotel (成都望江宾馆)</strong>. Meeting rooms and the detailed programme will be announced.</p></div>${news}</div></section>
+ <section class="section"><div class="container welcome-grid ${news?'':'no-news'}"><div class="welcome"><span class="eyebrow">Welcome to Chengdu</span><h2>A meeting place for<br>ideas and collaboration.</h2><p>The 27th International Conference on Group Decision and Negotiation brings the international GDN community to Chengdu, China, from <strong>6 to 9 June 2027</strong>, hosted by <strong>Sichuan University</strong>.</p><p>Researchers and practitioners exchange advances in group decision and negotiation, discuss emerging methods and applications, and develop ideas through dialogue and constructive feedback.</p><p>A dedicated doctoral track gives students an opportunity to present work in progress and receive guidance from experienced researchers.</p><p>The conference venue is <strong>Business School, Sichuan University</strong>. Meeting rooms and the detailed programme will be announced.</p></div>${news}</div></section>
  <section class="section alt scope-section"><div class="container"><div class="section-heading"><div><span class="eyebrow">Many perspectives. A shared conversation.</span><h2>Conference scope</h2></div><a href="#scope">Explore the full scope</a></div><div class="scope-grid">${topics.map((t,i)=>`<article class="scope-card"><span class="scope-number">${String(i+1).padStart(2,'0')}</span><h3>${t[0]}</h3><p>${t[1]}</p></article>`).join('')}</div></div></section>
  ${db.settings.speakers_status==='published'?`<section class="section"><div class="container"><div class="section-heading"><div><span class="eyebrow">Ideas that move the field</span><h2>Invited speakers</h2></div><a href="#keynote-speakers">Talks & biographies</a></div>${db.speakers.length?`<div class="speaker-grid">${[...db.speakers].sort((a,b)=>a.order-b.order).map(p=>`<a class="speaker-card" href="#keynote-speakers?speaker=${encodeURIComponent(p.speaker_id)}">${p.image?`<div class="portrait"><img loading="lazy" src="${esc(safeUrl(p.image))}" alt="${esc(p.name)}"></div>`:''}<h3>${esc(p.name)}</h3><div class="affiliation">${esc(p.affiliation)}</div><div class="talk">${esc(p.talk_title)}</div></a>`).join('')}</div>`:pending('Speakers to be announced','The invited speakers and their talks will be introduced here.')}</div></section>`:""}
  ${isProgramPublished()?`<section class="section alt"><div class="container"><div class="section-heading"><div><span class="eyebrow">6–9 June 2027</span><h2>Conference programme</h2></div><a href="#schedule">Programme & social events</a></div>${isProgramPublished()?`<div class="day-overview">${conferenceDays.map(date=>{const rows=program.sessions.filter(p=>p.date===date);const featured=rows.filter(p=>['keynote','plenary','doctoral'].includes(p.type));return `<a href="#schedule?day=${date}"><span>${dayLabel(date).short}</span><strong>${dayLabel(date).long}</strong><p>${featured.length?featured.map(p=>esc(p.title)).join('<br>'):'View the day’s programme'}</p></a>`;}).join('')}</div><p class="program-note">All times are local to Chengdu (${esc(db.settings.timezone_label)}).</p>`:pending('Programme to be announced','The detailed programme for 6–9 June 2027 will be published here.')} </div></section>`:""}
- <section class="section"><div class="container"><div class="venue-strip"><img class="venue-photo" loading="lazy" src="${esc(s.venue_image)}" alt="Entrance to Wangjiang Hotel in Chengdu"><div class="venue-copy"><span class="eyebrow">Conference venue</span><h2>Wangjiang Hotel<br><span lang="zh">成都望江宾馆</span></h2><p>A garden setting for research, conversation and new connections.</p><p>No. 42 Xiashahepu Street, Chengdu<br>Hosted by Sichuan University</p><a class="btn" href="#venue">Venue & practical information</a></div></div></div></section>`;
+ <section class="section"><div class="container"><div class="venue-strip"><img class="venue-photo" loading="lazy" src="${esc(s.venue_image)}" alt="North gate of Sichuan University’s Wangjiang Campus"><div class="venue-copy"><span class="eyebrow">Conference venue</span><h2>Business School,<br>Sichuan University</h2><p>Research, dialogue and new connections on Wangjiang Campus.</p><p>No. 29 Wangjiang Road, Wuhou District, Chengdu</p><a class="btn" href="#venue">Venue & practical information</a></div></div></div></section>`;
 }
 function dayLabel(date){const d=new Date(date+'T12:00:00Z');return {short:d.toLocaleDateString('en-GB',{weekday:'long',timeZone:'UTC'}),long:d.toLocaleDateString('en-GB',{day:'numeric',month:'long',timeZone:'UTC'})};}
 function dateLabel(date,year=true){return new Date(date+'T12:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'long',...(year?{year:'numeric'}:{}),timeZone:'UTC'});}
@@ -211,7 +197,7 @@ function templateHtml(id){return document.getElementById(id)?.innerHTML.trim()||
 function richText(text){return String(text||'').split(/\n\s*\n/).filter(t=>t.trim()).map(t=>t.startsWith('- ')?`<ul>${t.split('\n').map(line=>`<li>${md(line.replace(/^- /,''))}</li>`).join('')}</ul>`:`<p>${md(t)}</p>`).join('');}
 function groupedRows(rows){const groups=new Map();for(const row of [...rows].sort((a,b)=>a.group_order-b.group_order||a.order-b.order)){if(!groups.has(row.group))groups.set(row.group,[]);groups.get(row.group).push(row);}return [...groups];}
 function committees(){
- return `<div class="committee-directory">${groupedRows(db.committees).map(([group,people],i)=>`<section class="committee-role role-${i%5} ${people.length===1?'single-role':''} ${group==='Program Committee'?'pc-role':''}"><header class="committee-role-heading"><h2>${esc(group)}</h2><span>${people.length} ${people.length===1?'member':'members'}</span></header><div class="committee-members">${people.map(p=>`<article class="committee-person"><h3>${md(p.name)}</h3><p>${md(p.affiliation)}</p></article>`).join('')}</div></section>`).join('')}</div>`;
+ return `<div class="committee-directory">${groupedRows(db.committees).map(([group,people],i)=>`<section class="committee-role role-${i%5} ${people.length===1?'single-role':''} ${group==='Program Committee'?'pc-role':''}"><header class="committee-role-heading"><h2>${esc(group)}</h2></header><div class="committee-members">${people.map(p=>`<article class="committee-person"><h3>${md(p.name)}</h3><p>${md(p.affiliation)}</p></article>`).join('')}</div></section>`).join('')}</div>`;
 }
 function importantDates(){if(!db.dates.length)return pending('Important dates','The submission and registration deadlines will be announced.');return groupedRows(db.dates).map(([group,rows],i)=>`<h2>${esc(group)}</h2><ul>${rows.map(r=>`<li>${esc(r.event)}: ${r.previous_date?`<del>${dateLabel(r.previous_date)}</del> `:''}${r.date_prefix?esc(r.date_prefix)+' ':''}${r.date?dateLabel(r.date):'<strong>To be announced</strong>'}</li>`).join('')}</ul>${i===0?templateHtml('date-notes-stream-proposals'):''}`).join('');}
 function programmeHtml(date){
@@ -238,7 +224,7 @@ function schedule(){
 function hotels(){
  const rows=[...(db.hotels||[])].sort((a,b)=>a.order-b.order);
  if(!rows.length)return pending('Hotel information','Accommodation options will be added here.');
- return `<div class="hotel-grid">${rows.map(h=>`<article class="hotel-card"><div class="hotel-heading"><span class="hotel-stars">${'★'.repeat(Number(h.stars))}<small>${Number(h.stars)}-star category</small></span>${h.hotel_id==='wangjiang'?'<span class="status-pill">Conference venue</span>':''}</div><h2>${esc(h.name)}</h2><p class="chinese-name" lang="zh">${esc(h.name_zh)}</p><p>${esc(h.area)}</p><dl><dt>Address</dt><dd>${esc(h.address)}<br><span lang="zh">${esc(h.address_zh)}</span></dd><dt>Getting to the venue</dt><dd>${esc(h.transport)}</dd><dt>Conference rate</dt><dd>${esc(h.rate_note||'To be announced')}</dd></dl>${h.note?`<p class="hotel-note">${md(h.note)}</p>`:''}<div class="hotel-links">${h.booking_url?`<a class="btn" ${linkAttrs(h.booking_url)}>Hotel & booking</a>`:''}${h.category_source?`<a class="text-link" ${linkAttrs(h.category_source)}>Category source</a>`:''}</div></article>`).join('')}</div>`;
+ return `<div class="hotel-grid">${rows.map(h=>`<article class="hotel-card"><div class="hotel-heading"><span class="hotel-stars">${'★'.repeat(Number(h.stars))}<small>${Number(h.stars)}-star category</small></span></div><h2>${esc(h.name)}</h2><p>${esc(h.area)}</p><dl><dt>Address</dt><dd>${esc(h.address)}</dd><dt>Getting to the venue</dt><dd>${esc(h.transport)}</dd><dt>Conference rate</dt><dd>${esc(h.rate_note||'To be announced')}</dd></dl>${h.note?`<p class="hotel-note">${md(h.note)}</p>`:''}<div class="hotel-links">${h.booking_url?`<a class="btn" ${linkAttrs(h.booking_url)}>Hotel & booking</a>`:''}${h.category_source?`<a class="text-link" ${linkAttrs(h.category_source)}>Category source</a>`:''}</div></article>`).join('')}</div>`;
 }
 function speakerPanel(speaker){
  return `<div class="speaker-profile">${speaker.image?`<img src="${esc(safeUrl(speaker.image))}" alt="${esc(speaker.name)}">`:""}<div><h2>${esc(speaker.name)}</h2><p class="speaker-position">${md(speaker.position||speaker.affiliation)}</p>${speaker.award?`<p class="speaker-award">${esc(speaker.award)}</p>`:''}</div></div><h2 class="speaker-talk-title">${esc(speaker.talk_title)}</h2><div class="speaker-description">${speaker.abstract?'<h3>Abstract</h3>'+richText(speaker.abstract):''}${speaker.bio?'<h3>Bio</h3>'+richText(speaker.bio):''}</div>`;
@@ -276,6 +262,11 @@ function render(){
  window.scrollTo({top:0,behavior:'instant'});
 }
 document.addEventListener('click',e=>{
+ const menuSummary=e.target.closest('#navigation > details > summary');
+ if(menuSummary){
+  const currentMenu=menuSummary.parentElement;
+  document.querySelectorAll('#navigation > details[open]').forEach(menu=>{if(menu!==currentMenu)menu.open=false;});
+ }
  const scheduleTab=e.target.closest('[data-schedule-tab]');if(scheduleTab){activeSchedule=scheduleTab.dataset.scheduleTab;history.replaceState(null,'','#schedule?view='+activeSchedule+(activeDay?'&day='+activeDay:''));const scroll=window.scrollY;main.innerHTML=detail(db.pages.find(p=>p.page_id==='schedule'));$('[data-schedule-tab="'+activeSchedule+'"]').focus({preventScroll:true});window.scrollTo({top:scroll,behavior:'instant'});return;}
  const speaker=e.target.closest('[data-speaker]');if(speaker){activeSpeaker=speaker.dataset.speaker;history.replaceState(null,'','#keynote-speakers?speaker='+encodeURIComponent(activeSpeaker));const scroll=window.scrollY;main.innerHTML=detail(db.pages.find(p=>p.page_id==='keynote-speakers'));$('[data-speaker="'+activeSpeaker+'"]').focus({preventScroll:true});window.scrollTo({top:scroll,behavior:'instant'});return;}
  const day=e.target.closest('[data-day]');if(day){activeDay=day.dataset.day;activeSchedule='programme';history.replaceState(null,'','#schedule?view=programme&day='+activeDay);const scroll=window.scrollY;main.innerHTML=detail(db.pages.find(p=>p.page_id==='schedule'));$('[data-day="'+activeDay+'"]').focus({preventScroll:true});window.scrollTo({top:scroll,behavior:'instant'});return;}

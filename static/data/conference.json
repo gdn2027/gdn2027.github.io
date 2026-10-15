@@ -13,37 +13,37 @@
   "speakers": [],
   "committees": [
     {
-      "group": "Honorary Chair",
-      "name": "Pascale Zaraté",
-      "affiliation": "Toulouse Capitole University, France",
+      "group": "Honorary Chairs",
+      "name": "Liping Fang",
+      "affiliation": "Toronto Metropolitan University, Canada",
       "group_order": 1.0,
       "order": 1.0
     },
     {
+      "group": "Honorary Chairs",
+      "name": "Pascale Zaraté",
+      "affiliation": "Toulouse Capitole University, France",
+      "group_order": 1.0,
+      "order": 2.0
+    },
+    {
       "group": "General Chairs",
-      "name": "Liping Fang",
-      "affiliation": "Toronto Metropolitan University, Canada",
+      "name": "Tomasz Wachowicz",
+      "affiliation": "University of Economics in Katowice, Poland",
       "group_order": 2.0,
       "order": 1.0
     },
     {
       "group": "General Chairs",
-      "name": "Fumin Deng",
-      "affiliation": "Sichuan University, China",
+      "name": "Danielle Costa Morais",
+      "affiliation": "Federal University of Pernambuco, Brazil",
       "group_order": 2.0,
       "order": 2.0
     },
     {
-      "group": "General Chairs",
-      "name": "Yucheng Dong",
-      "affiliation": "Sichuan University, China",
-      "group_order": 2.0,
-      "order": 3.0
-    },
-    {
       "group": "Program Chairs",
-      "name": "Zhen Zhang",
-      "affiliation": "Dalian University of Technology, China",
+      "name": "Marek Szopa",
+      "affiliation": "University of Economics in Katowice, Poland",
       "group_order": 3.0,
       "order": 1.0
     },
@@ -52,322 +52,385 @@
       "name": "Ginger Ke",
       "affiliation": "Memorial University of Newfoundland, Canada",
       "group_order": 3.0,
-      "order": 2.0
-    },
-    {
-      "group": "Local Program and Organizing Chairs",
-      "name": "Haiming Liang",
-      "affiliation": "Sichuan University, China",
-      "group_order": 4.0,
-      "order": 1.0
-    },
-    {
-      "group": "Local Program and Organizing Chairs",
-      "name": "Hengjie Zhang",
-      "affiliation": "Hohai University, China",
-      "group_order": 4.0,
       "order": 2.0
     },
     {
       "group": "Program Committee",
       "name": "Adiel Teixeira de Almeida",
       "affiliation": "Federal University of Pernambuco, Brazil",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 1.0
     },
     {
       "group": "Program Committee",
       "name": "Alberto Franco",
       "affiliation": "University of Bristol Business School, UK",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 2.0
     },
     {
       "group": "Program Committee",
       "name": "Bo Yu",
       "affiliation": "Dalhousie University, Canada",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 3.0
     },
     {
       "group": "Program Committee",
       "name": "Bogumił Kamiński",
       "affiliation": "Warsaw School of Economics, Poland",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 4.0
     },
     {
       "group": "Program Committee",
       "name": "Carolina Lino Martins",
       "affiliation": "Federal University of Mato Grosso do Sul, Brazil",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 5.0
     },
     {
       "group": "Program Committee",
       "name": "Colin Eden",
       "affiliation": "Strathclyde University, UK",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 6.0
     },
     {
       "group": "Program Committee",
       "name": "Danielle Costa Morais",
       "affiliation": "Federal University of Pernambuco, Brazil",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 7.0
     },
     {
       "group": "Program Committee",
       "name": "Dorota Górecka",
       "affiliation": "Nicolaus Copernicus University in Toruń, Poland",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 8.0
     },
     {
       "group": "Program Committee",
       "name": "Eduarda Frej",
       "affiliation": "Federal University of Pernambuco, Brazil",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 9.0
     },
     {
       "group": "Program Committee",
       "name": "Ewa Roszkowska",
       "affiliation": "Bialystok University of Technology, Poland",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 10.0
     },
     {
       "group": "Program Committee",
       "name": "Fran Ackermann",
       "affiliation": "Curtin University, Australia",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 11.0
     },
     {
       "group": "Program Committee",
       "name": "Fuad Aleskerov",
       "affiliation": "HSE University, Russia",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 12.0
     },
     {
       "group": "Program Committee",
       "name": "Ginger Ke",
       "affiliation": "Memorial University of Newfoundland, Canada",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 13.0
     },
     {
       "group": "Program Committee",
       "name": "G.J. de Vreede",
       "affiliation": "Stevens Institute of Technology, USA",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 14.0
     },
     {
       "group": "Program Committee",
       "name": "Haiyan Xu",
       "affiliation": "University of Aeronautics and Astronautics, China",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 15.0
     },
     {
       "group": "Program Committee",
       "name": "Hannu Nurmi",
       "affiliation": "University of Turku, Finland",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 16.0
     },
     {
       "group": "Program Committee",
       "name": "José María Moreno-Jiménez",
       "affiliation": "University of Zaragoza, Spain",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 17.0
     },
     {
       "group": "Program Committee",
       "name": "Katia Sycara",
       "affiliation": "Carnegie Mellon University, USA",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 18.0
     },
     {
       "group": "Program Committee",
       "name": "Keith Hipel",
       "affiliation": "University of Waterloo, Canada",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 19.0
     },
     {
       "group": "Program Committee",
       "name": "Kevin Li",
       "affiliation": "University of Windsor, Canada",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 20.0
     },
     {
       "group": "Program Committee",
       "name": "Liping Fang",
       "affiliation": "Toronto Metropolitan University, Canada",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 21.0
     },
     {
       "group": "Program Committee",
       "name": "Luis Dias",
       "affiliation": "University of Coimbra, Portugal",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 22.0
     },
     {
       "group": "Program Committee",
       "name": "Maisa Mendonça Silva",
       "affiliation": "Federal University of Pernambuco, Brazil",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 23.0
     },
     {
       "group": "Program Committee",
       "name": "Marc Kilgour Wilfrid Laurier University",
       "affiliation": "Canada",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 24.0
     },
     {
       "group": "Program Committee",
       "name": "Mareike Schoop",
       "affiliation": "University of Hohenheim, Germany",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 25.0
     },
     {
       "group": "Program Committee",
       "name": "Maria Teresa Escobar",
       "affiliation": "Universidad de Zaragoza, Spain",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 26.0
     },
     {
       "group": "Program Committee",
       "name": "Masahide Horita",
       "affiliation": "University of Tokyo, Japan",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 27.0
     },
     {
       "group": "Program Committee",
       "name": "Michael Filzmoser",
       "affiliation": "TU Wien, Austria",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 28.0
     },
     {
       "group": "Program Committee",
       "name": "Muhammed-Fatih Kaya",
       "affiliation": "University of Hohenheim, Germany",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 29.0
     },
     {
       "group": "Program Committee",
       "name": "Nikolaos Matsatsinis",
       "affiliation": "Technical University of Crete, Greece",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 30.0
     },
     {
       "group": "Program Committee",
       "name": "Pascale Zaraté",
       "affiliation": "Université Toulouse 1 Capitole, France",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 31.0
     },
     {
       "group": "Program Committee",
       "name": "Przemyslaw Szufel",
       "affiliation": "Warsaw School of Economics, Poland",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 32.0
     },
     {
       "group": "Program Committee",
       "name": "Raimo Hämäläinen",
       "affiliation": "Aalto University, Finnland",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 33.0
     },
     {
       "group": "Program Committee",
       "name": "Rudolf Vetschera",
       "affiliation": "University of Vienna, Austria",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 34.0
     },
     {
       "group": "Program Committee",
       "name": "Sabine Köszegi",
       "affiliation": "TU Wien, Austria",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 35.0
     },
     {
       "group": "Program Committee",
       "name": "Shawei He",
       "affiliation": "Nanjing University of Aeronautics and Astronautics, China",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 36.0
     },
     {
       "group": "Program Committee",
       "name": "ShiKui Wu",
       "affiliation": "Lakehead University, Canada",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 37.0
     },
     {
       "group": "Program Committee",
       "name": "Shinan Zhao",
       "affiliation": "Jiangsu University of Science and Technology, China",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 38.0
     },
     {
       "group": "Program Committee",
       "name": "Tomasz Szapiro",
       "affiliation": "Warsaw School of Economics, Poland",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 39.0
     },
     {
       "group": "Program Committee",
       "name": "Tomasz Wachowicz",
       "affiliation": "University of Economics in Katowice, Poland",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 40.0
     },
     {
       "group": "Program Committee",
       "name": "Tung X. Bui",
       "affiliation": "University of Hawaii, USA",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 41.0
     },
     {
       "group": "Program Committee",
       "name": "Yufei Yuan",
       "affiliation": "McMaster University, Canada",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 42.0
     },
     {
       "group": "Program Committee",
       "name": "Zhen Zhang",
       "affiliation": "Dalian University of Technology, China",
-      "group_order": 5.0,
+      "group_order": 4.0,
       "order": 43.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Tomasz Wachowicz",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 1.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Marek Szopa",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 2.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Maciej Nowak",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 3.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Tadeusz Trzaskalik",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 4.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Ewa Michalska",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 5.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Jerzy Michnik",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 6.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Krzysztof Targiel",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 7.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Renata Dudzińska-Baryła",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 8.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Anna Gorczyca-Goraj",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 9.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Krzysztof Grzanka",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 10.0
+    },
+    {
+      "group": "Local Program and Organizing Committee",
+      "name": "Sławomir Jarek",
+      "affiliation": "",
+      "group_order": 5.0,
+      "order": 11.0
     }
   ],
   "dates": [
@@ -492,78 +555,78 @@
   "fees": [],
   "hotels": [
     {
-      "hotel_id": "wangjiang",
-      "name": "Wangjiang Hotel",
-      "name_zh": "成都望江宾馆",
-      "stars": 5,
-      "category_source": "https://conference.cs.cityu.edu.hk/icist/ICIST2024/Hotel_Brochure.pdf",
-      "address": "No. 42 Xiashahepu Street, Chengdu",
-      "address_zh": "成都市锦江区下沙河铺街42号",
-      "area": "Conference venue · eastern Chengdu",
-      "transport": "Conference sessions take place at this hotel.",
-      "booking_url": "https://hk.trip.com/hotels/chengdu-hotel-detail-453148/wangjiang-hotel-wangjiang-jiudian/",
-      "rate_note": "To be announced",
-      "note": "Five-star garden hotel with conference facilities. Hotel reception: +86 28 8479 0000.",
+      "hotel_id": "atour-kehua",
+      "name": "Atour Hotel · Sichuan University Kehua North Road",
+      "name_zh": "成都四川大学科华北路亚朵酒店",
+      "stars": 4,
+      "category_source": "https://uk.trip.com/hotels/chengdu-hotel-detail-118280723/atour-hotel-sichuan-university-wangjiang-campus-metro-station-jiu-yan-bridge-chengdu/",
+      "address": "No. 36 Kehua North Road, Wuhou District, Chengdu",
+      "address_zh": "成都市武侯区科华北路36号",
+      "area": "Kehua North Road · west side of Wangjiang Campus",
+      "transport": "Travel to the Business School at No. 29 Wangjiang Road. A campus gate near this hotel is not necessarily the closest entrance to the conference rooms.",
+      "booking_url": "https://uk.trip.com/hotels/chengdu-hotel-detail-118280723/atour-hotel-sichuan-university-wangjiang-campus-metro-station-jiu-yan-bridge-chengdu/",
+      "rate_note": "Conference rate and room block to be announced. Check availability for 6–9 June 2027.",
+      "note": "Four-star platform category reported by Trip.com. Please confirm the campus entry route before departure.",
       "order": 1.0
     },
     {
-      "hotel_id": "hampton-dongda",
-      "name": "Hampton by Hilton Chengdu Jiuyan Bridge Dongda Road",
-      "name_zh": "成都九眼桥东大路希尔顿欢朋酒店",
+      "hotel_id": "mercure-jiuyanqiao",
+      "name": "Mercure Chengdu Jiuyanqiao",
+      "name_zh": "成都九眼桥美居酒店",
       "stars": 4,
-      "category_source": "https://us.trip.com/hotels/chengdu-hotel-detail-132003578/hampton-by-hilton-jiuyan-bridge-dongda-road/",
-      "address": "No. 499 Huiquan South Road, Chengdu",
-      "address_zh": "成都市汇泉南路499号",
-      "area": "Dongda Road / Niushikou area",
-      "transport": "Take a taxi to Wangjiang Hotel, or check a route via the nearby Dongdalu metro station.",
-      "booking_url": "https://www.hilton.com/en/hotels/ctueshx-hampton-chengdu-jiuyan-bridge-dongda-road/",
-      "rate_note": "To be announced",
-      "note": "Four-star category on Trip.com. Hilton lists breakfast, a fitness centre and meeting space.",
+      "category_source": "https://all.accor.com/hotel/B7D4/index.en.shtml",
+      "address": "Building 2, Sunshine New City, No. 87, Section 5, East First Ring Road, Jinjiang District, Chengdu",
+      "address_zh": "成都市锦江区一环路东五段87号阳光新业中心2号楼",
+      "area": "Jiuyanqiao / Niuwangmiao · north of Wangjiang Campus",
+      "transport": "Take a taxi or ride-hailing car to the Business School, Sichuan University. Follow the final conference instructions for the campus gate and drop-off point.",
+      "booking_url": "https://all.accor.com/hotel/B7D4/index.en.shtml",
+      "rate_note": "Conference rate and room block to be announced. Check availability for 6–9 June 2027.",
+      "note": "Accor lists this property as four stars. The street address follows the Chinese-language hotel listing.",
       "order": 2.0
     },
     {
-      "hotel_id": "holiday-oriental",
-      "name": "Holiday Inn Chengdu Oriental Plaza",
-      "name_zh": "成都东方广场假日酒店",
+      "hotel_id": "hanwen-hejiangting",
+      "name": "Hejiangting Hanwen Hotel",
+      "name_zh": "成都合江亭翰文大酒店",
       "stars": 4,
-      "category_source": "https://www.expedia.com.tw/en/Chengdu-Hotels-Holiday-Inn-Chengdu-Oriental-Plaza.h4735767.Hotel-Information?dateless=true&guestRating=40",
-      "address": "No. 231 Zhiquan Section, East Avenue, Jinjiang District, Chengdu",
-      "address_zh": "成都市锦江区东大街芷泉段231号",
-      "area": "Dongmen Bridge / eastern city centre",
-      "transport": "Near Dongmen Bridge metro station on Line 2. Use a taxi or plan a metro journey toward the venue.",
-      "booking_url": "https://www.ihg.com/holidayinn/hotels/us/en/chengdu/ctuop/hoteldetail",
-      "rate_note": "To be announced",
-      "note": "Four-star property on Expedia. A city-centre option with convenient metro access.",
+      "category_source": "https://www.trip.com/hotels/chengdu-hotel-detail-397159/hejiangting-hanwen-hotel/",
+      "address": "No. 138 Binjiang East Road, Jinjiang District, Chengdu",
+      "address_zh": "成都市锦江区滨江东路138号",
+      "area": "Hejiangting / Jinjiang riverside · north of Wangjiang Campus",
+      "transport": "Plan a taxi or ride-hailing journey to the Business School at No. 29 Wangjiang Road; allow time for the final campus walk.",
+      "booking_url": "https://www.trip.com/hotels/chengdu-hotel-detail-397159/hejiangting-hanwen-hotel/",
+      "rate_note": "Conference rate and room block to be announced. Check availability for 6–9 June 2027.",
+      "note": "Four-star platform category reported by Trip.com.",
       "order": 3.0
     },
     {
-      "hotel_id": "hanwen",
-      "name": "Chengdu Hejiangting Hanwen Hotel",
-      "name_zh": "成都合江亭翰文大酒店",
+      "hotel_id": "atour-nijiaqiao",
+      "name": "Atour Hotel · Wangjiang Campus Nijiaqiao Metro Station",
+      "name_zh": "成都四川大学望江校区倪家桥地铁站亚朵酒店",
       "stars": 4,
-      "category_source": "https://www.amap.com/place/B001C7WKF8",
-      "address": "No. 138 Binjiang East Road, Jinjiang District, Chengdu",
-      "address_zh": "成都市锦江区滨江东路138号",
-      "area": "Hejiangting / Jinjiang riverside",
-      "transport": "Plan a taxi journey to Wangjiang Hotel. This is a city-centre alternative rather than an on-site hotel.",
-      "booking_url": "https://www.booking.com/hotel/cn/cheng-du-he-jiang-ting-han-wen-da-jiu-dian.zh-tw.html",
-      "rate_note": "To be announced",
-      "note": "Listed as a four-star hotel by Amap.",
+      "category_source": "https://www.priceline.com/hotel-deals/en-us/P5000471708/H168854804/atour-hotel-chengdu-consulate-road-wangjiang-campus-of-sichuan-university.ssp",
+      "address": "No. 2 Lingshiguan Road, Wuhou District, Chengdu",
+      "address_zh": "成都市武侯区领事馆路2号",
+      "area": "Nijiaqiao / Lingshiguan Road · southwest of Wangjiang Campus",
+      "transport": "A taxi or ride-hailing car is convenient for reaching the Business School. Use the school name and full address rather than a generic university destination.",
+      "booking_url": "https://www.priceline.com/hotel-deals/en-us/P5000471708/H168854804/atour-hotel-chengdu-consulate-road-wangjiang-campus-of-sichuan-university.ssp",
+      "rate_note": "Conference rate and room block to be announced. Check availability for 6–9 June 2027.",
+      "note": "Priceline reports a four-star category. Some booking sites use the earlier English name “Atour Hotel Chengdu Consulate Road Wangjiang Campus of Sichuan University”.",
       "order": 4.0
     },
     {
       "hotel_id": "ibis-kehua",
       "name": "ibis Chengdu Kehua",
-      "name_zh": "宜必思成都科华中路酒店",
+      "name_zh": "宜必思成都科华酒店",
       "stars": 3,
       "category_source": "https://all.accor.com/hotel/6450/index.en.shtml",
-      "address": "No. 10 Hang Kong Road, Wuhou District, Chengdu",
+      "address": "No. 10 Hangkong Road, Wuhou District, Chengdu",
       "address_zh": "成都市武侯区航空路10号",
-      "area": "Kehua Road / Sichuan University area",
-      "transport": "Taxi recommended for the journey to Wangjiang Hotel. This option is closer to the university area than to the conference venue.",
+      "area": "Kehua / Hangkong Road · southwest of Wangjiang Campus",
+      "transport": "Use a taxi or ride-hailing car for the journey to the Business School. This budget option is farther from the school than the campus-side choices.",
       "booking_url": "https://all.accor.com/hotel/6450/index.en.shtml",
-      "rate_note": "To be announced",
-      "note": "Three stars on Accor’s official website; an economy option in the wider university area.",
+      "rate_note": "Conference rate and room block to be announced. Check availability for 6–9 June 2027.",
+      "note": "Accor lists this property as three stars; included as a lower-budget alternative.",
       "order": 5.0
     }
   ],

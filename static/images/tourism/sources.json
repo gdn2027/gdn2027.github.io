@@ -117,20 +117,18 @@
   },
   {
     "subject": "Sichuan Cuisine",
-    "filename": "sichuan-cuisine.jpg",
-    "source_page_url": "https://commons.wikimedia.org/wiki/File:Mapo_doufu_by_Chen_Mapo_Restaurant_in_Chengdu_Sichuan%EF%BC%88%E9%99%B3%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%E5%BA%97%E3%81%AE%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%EF%BC%89.JPG",
-    "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Mapo_doufu_by_Chen_Mapo_Restaurant_in_Chengdu_Sichuan%EF%BC%88%E9%99%B3%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%E5%BA%97%E3%81%AE%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%EF%BC%89.JPG",
-    "downloaded_image_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Mapo_doufu_by_Chen_Mapo_Restaurant_in_Chengdu_Sichuan%EF%BC%88%E9%99%B3%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%E5%BA%97%E3%81%AE%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%EF%BC%89.JPG",
-    "photographer": "Kos88",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "credit": "Photo: Kos88 / Wikimedia Commons, CC BY-SA 4.0",
-    "photo_note": "Mapo tofu at Chen Mapo Restaurant in Chengdu, photographed 27 August 2013. This is food in Chengdu, not an overseas restaurant.",
-    "width": 4320,
-    "height": 3240,
-    "bytes": 5831168,
-    "reuse_note": "Provide photographer credit, source and license links, and indicate changes. Adapted images must carry the same or a compatible license.",
-    "web_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Mapo_doufu_by_Chen_Mapo_Restaurant_in_Chengdu_Sichuan%EF%BC%88%E9%99%B3%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%E5%BA%97%E3%81%AE%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%EF%BC%89.JPG/1280px-Mapo_doufu_by_Chen_Mapo_Restaurant_in_Chengdu_Sichuan%EF%BC%88%E9%99%B3%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%E5%BA%97%E3%81%AE%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%EF%BC%89.JPG",
-    "web_bytes": 233681
+    "filename": "sichuan-cuisine-hotpot.jpg",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:Shudaxia_hot_pot.jpg",
+    "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Shudaxia_hot_pot.jpg",
+    "downloaded_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Shudaxia_hot_pot.jpg/1280px-Shudaxia_hot_pot.jpg",
+    "photographer": "Fumikas Sagisavas",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit": "Photo: Fumikas Sagisavas / Wikimedia Commons, CC0 1.0",
+    "photo_note": "Sichuan hotpot at Shudaxia, Chengdu, photographed 4 September 2024.",
+    "width": 1280,
+    "height": 576,
+    "bytes": 345597,
+    "reuse_note": "CC0 permits reuse and adaptation, including commercial use; attribution is voluntary."
   }
 ]
