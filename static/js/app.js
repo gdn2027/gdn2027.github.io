@@ -25,7 +25,7 @@ const FIXED_CONFERENCE={
       "menu_group": "About",
       "order": 20,
       "intro": "",
-      "visible": false
+      "content_status": "draft"
     },
     {
       "page_id": "call-for-papers",
@@ -244,7 +244,7 @@ function detail(page){
  if(page.visible===false)body=pending(page.page_id==='venue'?'Venue to be confirmed':'Committee information to be announced','This information will be published when available.');
  else if(page.page_id==='schedule')body=schedule();
  else if(page.page_id==='keynote-speakers')body=speakers();
- else if(page.page_id==='committees')body=committees();
+ else if(page.page_id==='committees')body=page.content_status==='published'?committees():pending('Committee members to be announced','The GDN 2027 committee members will be announced here.');
  else if(page.page_id==='important-dates-2')body=importantDates();
  else if(page.page_id==='hotel-information')body=body.replace('<div id="hotel-list"></div>',hotels());
  else if(page.page_id==='registration' && db.fees.length)body=`<div class="table-scroll"><table><thead><tr><th>Fees (${esc(db.settings.currency)})</th><th>Early bird${db.settings.early_bird_until?'<br>until '+dateLabel(db.settings.early_bird_until,false):''}</th><th>Regular${db.settings.regular_until?'<br>until '+dateLabel(db.settings.regular_until,false):''}</th></tr></thead><tbody>${db.fees.map(f=>`<tr><td>${esc(f.category)}</td><td>${Number(f.early_amount).toFixed(2)}</td><td>${Number(f.regular_amount).toFixed(2)}</td></tr>`).join('')}</tbody></table></div>`+body.replace(/<div class="coming-soon">.*?<\/div>/s,'');
