@@ -6,10 +6,10 @@ const FIXED_CONFERENCE={
     "full_title": "27th International Conference on Group Decision and Negotiation",
     "date_label": "6–9 June 2027",
     "location": "Chengdu, China",
-    "host": "Sichuan University",
     "email": "gdn2027@gdnconference.org",
-    "hero_image": "static/images/scu-wangjiang-gate.png",
-    "venue_image": "static/images/scu-wangjiang-gate.png"
+    "hero_image": "static/images/tourism/kuanzhai.jpg",
+    "venue_image": "static/images/scu-wangjiang-gate.png",
+    "venue_status": "pending"
   },
   "pages": [
     {
@@ -24,7 +24,8 @@ const FIXED_CONFERENCE={
       "title": "Committees",
       "menu_group": "About",
       "order": 20,
-      "intro": ""
+      "intro": "",
+      "visible": false
     },
     {
       "page_id": "call-for-papers",
@@ -162,14 +163,17 @@ function md(value){
  s=s.replace(/\[([^\]]+)\]\(([^\s]+)\)/g,(_,text,url)=>`<a ${linkAttrs(url.replace(/&amp;/g,'&'))}>${text}</a>`);
  return s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g,'<em>$1</em>').replace(/~~([^~]+)~~/g,'<del>$1</del>').replace(/\n/g,'<br>');
 }
+function visiblePages(){return db.pages.filter(p=>p.visible!==false);}
+function isVenueConfirmed(){return db.site.venue_status==='confirmed';}
 function nav(){
  const order=['About','Submission','Programme','Proceedings','Hotel & Travel','Registration'];
  $('#navigation').innerHTML='<a href="#home" data-nav="home">Home</a>'+order.map(group=>{
-  const pages=db.pages.filter(p=>p.menu_group===group).sort((a,b)=>a.order-b.order);
+  const pages=visiblePages().filter(p=>p.menu_group===group).sort((a,b)=>a.order-b.order);
+  if(!pages.length)return '';
   if(pages.length===1)return `<a href="#${pages[0].page_id}" data-nav="${pages[0].page_id}">${esc(group)}</a>`;
   return `<details name="main-navigation" data-group="${esc(group)}"><summary>${esc(group)}</summary><div class="dropdown">${pages.map(p=>`<a href="#${p.page_id}" data-nav="${p.page_id}">${esc(p.title)}</a>`).join('')}</div></details>`;
  }).join('')+`<a href="mailto:${esc(db.site.email)}" aria-label="Contact the organizers by email">Contact</a>`;
- $('#footer').innerHTML=`<div class="container"><div class="footer-top"><div><a class="wordmark" href="#home">GDN<span>2027</span></a><p>${esc(db.site.full_title)}</p><p>${esc(db.site.host)} · China</p></div><div class="footer-links"><a href="#schedule">Programme</a><a href="#paper-submission-2">Submission</a><a href="#venue">Venue</a><a href="mailto:${esc(db.site.email)}">Contact</a></div></div><div class="footer-bottom"><span>${esc(db.site.date_label)} · ${esc(db.site.location)}</span></div></div>`;
+ $('#footer').innerHTML=`<div class="container"><div class="footer-top"><div><a class="wordmark" href="#home">GDN<span>2027</span></a><p>${esc(db.site.full_title)}</p></div><div class="footer-links"><a href="#schedule">Programme</a><a href="#paper-submission-2">Submission</a><a href="#travel">Travel</a><a href="mailto:${esc(db.site.email)}">Contact</a></div></div><div class="footer-bottom"><span>${esc(db.site.date_label)} · ${esc(db.site.location)}</span></div></div>`;
 }
 function isProgramPublished(){return db.settings.program_status==='published' && program.status==='published';}
 function pending(title,body){return `<div class="coming-soon"><span class="status-pill">To be announced</span><h2>${esc(title)}</h2><p>${esc(body)}</p></div>`;}
@@ -183,13 +187,12 @@ function home(){
  const s=db.site,news=latestNews();
  const topics=[['Methodological Foundations','Methods for shared decisions and negotiation.'],['Theoretical Foundations','Models of preferences, bargaining and conflict.'],['Technological Foundations','Intelligent tools and decision support systems.'],['Behavioural Aspects','People, communication and collective choice.'],['Systems Design and Use','Designing support for collaboration.'],['Applications','Research connected to real decisions.']];
  const conferenceDays=['2027-06-06','2027-06-07','2027-06-08','2027-06-09'];
- return `<section class="hero"><img src="${esc(s.hero_image)}" alt="North gate of Sichuan University’s Wangjiang Campus"><div class="container hero-inner"><h1><span class="conference-prefix">27th International Conference on</span>Group Decision<br><em>and Negotiation</em></h1><p>Connecting research, perspectives and practice in collective decision making.</p><div class="hero-meta"><span><strong>${esc(s.date_label)}</strong><small>Four days of research and exchange</small></span><span><strong>${esc(s.location)}</strong><small>Hosted by ${esc(s.host)}</small></span></div><div class="actions"><a class="btn" href="#call-for-papers">Call for papers</a><a class="btn light" href="#schedule">Conference programme</a><a class="btn outline" href="#hotel-information">Plan your stay</a></div></div></section>
- <div class="quickbar"><div class="container quick-grid"><a href="#call-for-papers"><small>RESEARCH</small><strong>Call for papers & streams</strong></a><a href="#important-dates-2"><small>DEADLINES</small><strong>Important dates</strong></a><a href="#committees"><small>OUR COMMUNITY</small><strong>Conference committees</strong></a><a href="#venue"><small>PLAN YOUR VISIT</small><strong>Venue, hotels & travel</strong></a></div></div>
- <section class="section"><div class="container welcome-grid ${news?'':'no-news'}"><div class="welcome"><span class="eyebrow">Welcome to Chengdu</span><h2>A meeting place for<br>ideas and collaboration.</h2><p>The 27th International Conference on Group Decision and Negotiation brings the international GDN community to Chengdu, China, from <strong>6 to 9 June 2027</strong>, hosted by <strong>Sichuan University</strong>.</p><p>Researchers and practitioners exchange advances in group decision and negotiation, discuss emerging methods and applications, and develop ideas through dialogue and constructive feedback.</p><p>A dedicated doctoral track gives students an opportunity to present work in progress and receive guidance from experienced researchers.</p><p>The conference venue is <strong>Business School, Sichuan University</strong>. Meeting rooms and the detailed programme will be announced.</p></div>${news}</div></section>
+ return `<section class="hero"><img src="${esc(s.hero_image)}" alt="Kuanzhai Alleys in Chengdu"><div class="container hero-inner"><h1><span class="conference-prefix">27th International Conference on</span>Group Decision<br><em>and Negotiation</em></h1><p>Connecting research, perspectives and practice in collective decision making.</p><div class="hero-meta"><span><strong>${esc(s.date_label)}</strong><small>Four days of research and exchange</small></span><span><strong>${esc(s.location)}</strong><small>Venue to be confirmed</small></span></div><div class="actions"><a class="btn" href="#call-for-papers">Call for papers</a><a class="btn light" href="#schedule">Conference programme</a><a class="btn outline" href="#hotel-information">Plan your stay</a></div></div></section>
+ <div class="quickbar"><div class="container quick-grid"><a href="#call-for-papers"><small>RESEARCH</small><strong>Call for papers & streams</strong></a><a href="#important-dates-2"><small>DEADLINES</small><strong>Important dates</strong></a><a href="#hotel-information"><small>PLAN YOUR VISIT</small><strong>Hotels & travel</strong></a></div></div>
+ <section class="section"><div class="container welcome-grid ${news?'':'no-news'}"><div class="welcome"><span class="eyebrow">Welcome to Chengdu</span><h2>A meeting place for<br>ideas and collaboration.</h2><p>The 27th International Conference on Group Decision and Negotiation brings the international GDN community to Chengdu, China, from <strong>6 to 9 June 2027</strong>.</p><p>The GDN conference series has brought researchers and practitioners together in cities including Glasgow, Toronto, Toulouse, Nanjing and Loughborough, with recent editions in Tokyo (2023), Porto (2024), Zaragoza (2025) and Katowice (2026). Continuing this tradition in Chengdu, participants will exchange advances in group decision and negotiation, discuss emerging methods and applications, and develop ideas through dialogue and constructive feedback.</p><p>A dedicated doctoral track gives students an opportunity to present work in progress and receive guidance from experienced researchers.</p><p>The conference venue in Chengdu is <strong>to be confirmed</strong>. Venue details and arrival instructions will be announced.</p></div>${news}</div></section>
  <section class="section alt scope-section"><div class="container"><div class="section-heading"><div><span class="eyebrow">Many perspectives. A shared conversation.</span><h2>Conference scope</h2></div><a href="#scope">Explore the full scope</a></div><div class="scope-grid">${topics.map((t,i)=>`<article class="scope-card"><span class="scope-number">${String(i+1).padStart(2,'0')}</span><h3>${t[0]}</h3><p>${t[1]}</p></article>`).join('')}</div></div></section>
  ${db.settings.speakers_status==='published'?`<section class="section"><div class="container"><div class="section-heading"><div><span class="eyebrow">Ideas that move the field</span><h2>Invited speakers</h2></div><a href="#keynote-speakers">Talks & biographies</a></div>${db.speakers.length?`<div class="speaker-grid">${[...db.speakers].sort((a,b)=>a.order-b.order).map(p=>`<a class="speaker-card" href="#keynote-speakers?speaker=${encodeURIComponent(p.speaker_id)}">${p.image?`<div class="portrait"><img loading="lazy" src="${esc(safeUrl(p.image))}" alt="${esc(p.name)}"></div>`:''}<h3>${esc(p.name)}</h3><div class="affiliation">${esc(p.affiliation)}</div><div class="talk">${esc(p.talk_title)}</div></a>`).join('')}</div>`:pending('Speakers to be announced','The invited speakers and their talks will be introduced here.')}</div></section>`:""}
- ${isProgramPublished()?`<section class="section alt"><div class="container"><div class="section-heading"><div><span class="eyebrow">6–9 June 2027</span><h2>Conference programme</h2></div><a href="#schedule">Programme & social events</a></div>${isProgramPublished()?`<div class="day-overview">${conferenceDays.map(date=>{const rows=program.sessions.filter(p=>p.date===date);const featured=rows.filter(p=>['keynote','plenary','doctoral'].includes(p.type));return `<a href="#schedule?day=${date}"><span>${dayLabel(date).short}</span><strong>${dayLabel(date).long}</strong><p>${featured.length?featured.map(p=>esc(p.title)).join('<br>'):'View the day’s programme'}</p></a>`;}).join('')}</div><p class="program-note">All times are local to Chengdu (${esc(db.settings.timezone_label)}).</p>`:pending('Programme to be announced','The detailed programme for 6–9 June 2027 will be published here.')} </div></section>`:""}
- <section class="section"><div class="container"><div class="venue-strip"><img class="venue-photo" loading="lazy" src="${esc(s.venue_image)}" alt="North gate of Sichuan University’s Wangjiang Campus"><div class="venue-copy"><span class="eyebrow">Conference venue</span><h2>Business School,<br>Sichuan University</h2><p>Research, dialogue and new connections on Wangjiang Campus.</p><p>No. 29 Wangjiang Road, Wuhou District, Chengdu</p><a class="btn" href="#venue">Venue & practical information</a></div></div></div></section>`;
+ ${isProgramPublished()?`<section class="section alt"><div class="container"><div class="section-heading"><div><span class="eyebrow">6–9 June 2027</span><h2>Conference programme</h2></div><a href="#schedule">Programme & social events</a></div>${isProgramPublished()?`<div class="day-overview">${conferenceDays.map(date=>{const rows=program.sessions.filter(p=>p.date===date);const featured=rows.filter(p=>['keynote','plenary','doctoral'].includes(p.type));return `<a href="#schedule?day=${date}"><span>${dayLabel(date).short}</span><strong>${dayLabel(date).long}</strong><p>${featured.length?featured.map(p=>esc(p.title)).join('<br>'):'View the day’s programme'}</p></a>`;}).join('')}</div><p class="program-note">All times are local to Chengdu (${esc(db.settings.timezone_label)}).</p>`:pending('Programme to be announced','The detailed programme for 6–9 June 2027 will be published here.')} </div></section>`:""}`;
 }
 function dayLabel(date){const d=new Date(date+'T12:00:00Z');return {short:d.toLocaleDateString('en-GB',{weekday:'long',timeZone:'UTC'}),long:d.toLocaleDateString('en-GB',{day:'numeric',month:'long',timeZone:'UTC'})};}
 function dateLabel(date,year=true){return new Date(date+'T12:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'long',...(year?{year:'numeric'}:{}),timeZone:'UTC'});}
@@ -224,7 +227,7 @@ function schedule(){
 function hotels(){
  const rows=[...(db.hotels||[])].sort((a,b)=>a.order-b.order);
  if(!rows.length)return pending('Hotel information','Accommodation options will be added here.');
- return `<div class="hotel-grid">${rows.map(h=>`<article class="hotel-card"><div class="hotel-heading"><span class="hotel-stars">${'★'.repeat(Number(h.stars))}<small>${Number(h.stars)}-star category</small></span></div><h2>${esc(h.name)}</h2><p>${esc(h.area)}</p><dl><dt>Address</dt><dd>${esc(h.address)}</dd><dt>Getting to the venue</dt><dd>${esc(h.transport)}</dd><dt>Conference rate</dt><dd>${esc(h.rate_note||'To be announced')}</dd></dl>${h.note?`<p class="hotel-note">${md(h.note)}</p>`:''}<div class="hotel-links">${h.booking_url?`<a class="btn" ${linkAttrs(h.booking_url)}>Hotel & booking</a>`:''}${h.category_source?`<a class="text-link" ${linkAttrs(h.category_source)}>Category source</a>`:''}</div></article>`).join('')}</div>`;
+ return `<div class="hotel-grid">${rows.map(h=>`<article class="hotel-card"><div class="hotel-heading"><span class="hotel-stars">${'★'.repeat(Number(h.stars))}<small>${Number(h.stars)}-star category</small></span></div><h2>${esc(h.name)}</h2><p>${esc(h.area)}</p><dl><dt>Address</dt><dd>${esc(h.address)}</dd><dt>Getting to the venue</dt><dd>${esc(isVenueConfirmed()?h.transport:'Venue and arrival route to be confirmed.')}</dd><dt>Conference rate</dt><dd>${esc(h.rate_note||'To be announced')}</dd></dl>${h.note?`<p class="hotel-note">${md(h.note)}</p>`:''}<div class="hotel-links">${h.booking_url?`<a class="btn" ${linkAttrs(h.booking_url)}>Hotel & booking</a>`:''}${h.category_source?`<a class="text-link" ${linkAttrs(h.category_source)}>Category source</a>`:''}</div></article>`).join('')}</div>`;
 }
 function speakerPanel(speaker){
  return `<div class="speaker-profile">${speaker.image?`<img src="${esc(safeUrl(speaker.image))}" alt="${esc(speaker.name)}">`:""}<div><h2>${esc(speaker.name)}</h2><p class="speaker-position">${md(speaker.position||speaker.affiliation)}</p>${speaker.award?`<p class="speaker-award">${esc(speaker.award)}</p>`:''}</div></div><h2 class="speaker-talk-title">${esc(speaker.talk_title)}</h2><div class="speaker-description">${speaker.abstract?'<h3>Abstract</h3>'+richText(speaker.abstract):''}${speaker.bio?'<h3>Bio</h3>'+richText(speaker.bio):''}</div>`;
@@ -238,7 +241,8 @@ function speakers(){
 }
 function detail(page){
  let body=templateHtml('page-'+page.page_id);
- if(page.page_id==='schedule')body=schedule();
+ if(page.visible===false)body=pending(page.page_id==='venue'?'Venue to be confirmed':'Committee information to be announced','This information will be published when available.');
+ else if(page.page_id==='schedule')body=schedule();
  else if(page.page_id==='keynote-speakers')body=speakers();
  else if(page.page_id==='committees')body=committees();
  else if(page.page_id==='important-dates-2')body=importantDates();
@@ -247,13 +251,16 @@ function detail(page){
  return `<div class="page-head"><div class="container"><h1>${esc(page.title)}</h1></div></div><div class="page-content ${page.page_id==='schedule'?'programme-content':''}">${body}</div>`;
 }
 function render(){
- const route=(location.hash.slice(1)||'home').split('?')[0];
+ const requested=(location.hash.slice(1)||'home').split('?')[0];
+ const hidden=db.pages.some(p=>p.page_id===requested&&p.visible===false);
+ const route=hidden?'home':requested;
+ if(hidden)history.replaceState(null,'','#home');
  if(route==='contact-us'){history.replaceState(null,'','#home');render();return;}
  const params=new URLSearchParams(location.hash.split('?')[1]||'');
  const day=params.get('day');if(day)activeDay=day;
  const speaker=params.get('speaker');if(speaker)activeSpeaker=speaker;
  if(route==='schedule')activeSchedule=params.get('view')||'programme';
- const page=db.pages.find(p=>p.page_id===route);
+ const page=visiblePages().find(p=>p.page_id===route);
  main.innerHTML=route==='home'?home():page?detail(page):`<div class="container loading"><h1>Page not found</h1><p><a href="#home">Return to the conference homepage</a></p></div>`;
  document.title=(page?page.title+' · ':'')+'GDN 2027 · Chengdu';
  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===route));
